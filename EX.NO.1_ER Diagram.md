@@ -14,11 +14,77 @@
 
 ### ER Diagram 
 
+![Screenshot 2024-03-13 112300](https://github.com/DrUmaRaniV/DBMS/assets/121490826/a7230af3-25fe-4310-85b3-44dbcf5892d6)
 
 ### Relational model
+![Screenshot 2024-03-13 113454](https://github.com/DrUmaRaniV/DBMS/assets/121490826/0816e4a2-3caa-459c-83ee-be7134095663)
 
 
 ### SQL DDL Schema 
+````
+CREATE TABLE student
+(
+  DOB INT NOT NULL,
+  name INT NOT NULL,
+  student_id INT NOT NULL,
+  PRIMARY KEY (student_id)
+);
+
+CREATE TABLE facutly
+(
+  f_id INT NOT NULL,
+  name INT NOT NULL,
+  department INT NOT NULL,
+  salary INT NOT NULL,
+  PRIMARY KEY (f_id)
+);
+
+CREATE TABLE subject
+(
+  subject_id INT NOT NULL,
+  subject_name INT NOT NULL,
+  PRIMARY KEY (subject_id)
+);
+
+CREATE TABLE course
+(
+  course_id INT NOT NULL,
+  duration INT NOT NULL,
+  course_name INT NOT NULL,
+  PRIMARY KEY (course_id)
+);
+
+CREATE TABLE department
+(
+  department_id INT NOT NULL,
+  d_name INT NOT NULL,
+  PRIMARY KEY (department_id)
+);
+
+CREATE TABLE exams
+(
+  date INT NOT NULL,
+  time INT NOT NULL,
+  exam_code INT NOT NULL,
+  PRIMARY KEY (exam_code)
+);
+
+CREATE TABLE student_phone_no
+(
+  phone_no INT NOT NULL,
+  student_id INT NOT NULL,
+  PRIMARY KEY (phone_no, student_id),
+  FOREIGN KEY (student_id) REFERENCES student(student_id)
+);
+
+CREATE TABLE facutly_mobile_no
+(
+  mobile_no INT NOT NULL,
+  f_id INT NOT NULL,
+  PRIMARY KEY (mobile_no, f_id),
+  FOREIGN KEY (f_id) REFERENCES facutly(f_id)
+);
+`````
 
 ## RESULT 
 <div align="justify">
