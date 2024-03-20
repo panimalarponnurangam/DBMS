@@ -1,4 +1,4 @@
-# EX 2 Data Manipulation Language (DML) Commands and built in functions in SQL
+# EX 3 Data Manipulation Language (DML) Commands and built in functions in SQL
 ## AIM:
 To create a manager database and execute DML queries using SQL.
 
@@ -28,17 +28,25 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### Q1) Update all the records of manager table by increasing 10% of their salary as bonus.
 
 ### QUERY:
-
+~~~
+update manager set salary=salary+(salary*10/100);
+~~~
 
 ### OUTPUT:
+![image](https://github.com/panimalarponnurangam/DBMS/assets/121490826/00104093-2568-47ac-8d4f-dfc093c36e73)
+
 
 ### Q2) Delete the records from manager table where the salary less than 2750.
 
 
 ### QUERY:
-
+~~~
+delete from manager 
+where salary < 2750
+~~~
 
 ### OUTPUT:
+![image](https://github.com/panimalarponnurangam/DBMS/assets/121490826/08cea841-cb4a-4e51-9387-ed7a43e4c7ec)
 
 ### Q3) Display each name of the employee as “Name” and annual salary as “Annual Salary” (Note: Salary in emp table is the monthly salary)
 
@@ -48,7 +56,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 ### OUTPUT:
 
-### Q5)	List the names of Clerks from emp table.
+### Q4)	List the names of Clerks from emp table.
 
 
 ### QUERY:
@@ -57,7 +65,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### OUTPUT:
 
 
-### Q6)	List the names of employee who are not Managers.
+### Q5)	List the names of employee who are not Managers.
 
 
 ### QUERY:
@@ -66,7 +74,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### OUTPUT:
 
 
-### Q7)	List the names of employees not eligible for commission.
+### Q6)	List the names of employees not eligible for commission.
 
 
 ### QUERY:
@@ -75,7 +83,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### OUTPUT:
 
 
-### Q8)	List employees whose name either start or end with ‘s’.
+### Q7)	List employees whose name either start or end with ‘s’.
 
 
 ### QUERY:
@@ -84,7 +92,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### OUTPUT:
 
 
-### Q9) Sort emp table in ascending order by hire-date and list ename, job, deptno and hire-date.
+### Q8) Sort emp table in ascending order by hire-date and list ename, job, deptno and hire-date.
 
 
 ### QUERY:
@@ -93,7 +101,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### OUTPUT:
 
 
-### Q10) List the Details of Employees who have joined before 30 Sept 81.
+### Q9) List the Details of Employees who have joined before 30 Sept 81.
 
 
 ### QUERY:
@@ -102,7 +110,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### OUTPUT:
 
 
-### Q11)	List ename, deptno and sal after sorting emp table in ascending order by deptno and then descending order by sal.
+### Q10)	List ename, deptno and sal after sorting emp table in ascending order by deptno and then descending order by sal.
 
 
 ### QUERY:
@@ -111,7 +119,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### OUTPUT:
 
 
-### Q12) List the names of employees not belonging to dept no 30,40 & 10
+### Q11) List the names of employees not belonging to dept no 30,40 & 10
 
 
 ### QUERY:
@@ -119,7 +127,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 ### OUTPUT:
 
-### Q13) Find number of rows in the table EMP
+### Q12) Find number of rows in the table EMP
 
 ### QUERY:
 
@@ -127,7 +135,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### OUTPUT:
 
 
-### Q14) Find maximum, minimum and average salary in EMP table.
+### Q13) Find maximum, minimum and average salary in EMP table.
 
 ### QUERY:
 
@@ -135,7 +143,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### OUTPUT:
 
 
-### Q15) List the jobs and number of employees in each job. The result should be in the descending order of the number of employees.
+### Q14) List the jobs and number of employees in each job. The result should be in the descending order of the number of employees.
 
 ### QUERY:
 
