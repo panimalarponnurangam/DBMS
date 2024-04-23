@@ -10,9 +10,22 @@
 5. End the begin section.
 
 ### Program:
+Create employee table:
+~~~
+CREATE TABLE customer (
+  customerid NUMBER,
+  customername VARCHAR(10),
+  dept VARCHAR(10),
+  salary NUMBER
+);
 
+INSERT INTO customer VALUES (1, 'Dhanu', 'HR', 100000);
+INSERT INTO customer VALUES (2, 'Amutha', 'Staff', 80000);
+select * from customer;
+~~~
 
 ### Output:
+![image](https://github.com/panimalarponnurangam/DBMS/assets/121490826/2b1f0eef-3699-4356-af64-1f4bccc5b125)
 
 
 ### Result:
