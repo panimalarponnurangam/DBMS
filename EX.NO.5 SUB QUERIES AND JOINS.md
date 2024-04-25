@@ -70,31 +70,48 @@ INSERT INTO DEPT (DEPTNO, DNAME, LOC) VALUES (40, 'OPERATIONS', 'BOSTON');
 
 
 ### QUERY:
-
-
+~~~~
+SELECT ENAME FROM EMP WHERE SAL > (SELECT SAL FROM EMP WHERE EMPNO = 7566);
+~~~~
 ### OUTPUT:
+![319057130-796f5e8b-1bf4-4acf-8f3b-b61bb96a7d5c](https://github.com/panimalarponnurangam/DBMS/assets/121490826/b328fc6a-d002-408a-8034-dd2e43174f99)
+
+
 
 ### Q2) List the ename,job,sal of the employee who get minimum salary in the company.
 
 ### QUERY:
-
-
+~~~~
+SELECT ENAME, JOB, SAL FROM EMP WHERE SAL = (SELECT MIN(SAL) FROM EMP);
+~~~~
 ### OUTPUT:
+![319057142-44925654-eecc-467f-9db7-1490b60620a3](https://github.com/panimalarponnurangam/DBMS/assets/121490826/23ee7eb0-a3f4-45f0-992c-315ef9a4f2c1)
+
+
+
 
 ### Q3) List ename, job of the employees who work in deptno 10 and his/her job is any one of the job in the department ‘SALES’.
 
 ### QUERY:
-
+~~~~
+SELECT ENAME, JOB FROM EMP WHERE DEPTNO = 10 AND JOB IN (SELECT JOB FROM EMP WHERE JOB = 'sales');
+~~~~
 
 ### OUTPUT:
 
+![319057163-44abc95f-b0e6-419a-a8e0-4fc6e5d129b8](https://github.com/panimalarponnurangam/DBMS/assets/121490826/c7d3100b-d22a-46f3-8ba2-474abc11eaf7)
 
 ### Q4) Create a view empv5 (for the table emp) that contains empno, ename, job of the employees who work in dept 10.
 
 ### QUERY:
-
+~~~~
+CREATE VIEW empv5 AS SELECT empno, ename, job FROM EMP WHERE deptno = 10;
+SELECT ename FROM empv5;
+~~~~
 
 ### OUTPUT:
+![319057179-d7724c58-ff04-44c6-9a4e-ed9810f66641](https://github.com/panimalarponnurangam/DBMS/assets/121490826/228b3d9a-c792-4823-b7ac-41cabe0f9af3)
+
 
 ### Q5) Create a view with column aliases empv30 that contains empno, ename, sal of the employees who work in dept 30. Also display the contents of the view.
 
